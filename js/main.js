@@ -9,31 +9,8 @@ let superpoder = 40;
 
 
 //ATAQUE DEL RIVAL
-//ATAQUE DEL RIVAL
 function vidaenemigarestante0() {
-    console.log('----Esperando ataque del rival----')
-    console.log('0: Golpe de puño (20 pts de daño')
-    console.log('1: Patada de fuego (30 pts de daño')
-    console.log('2: Superpoder (40 pts de daño')
     alert('Esperando ataque enemigo')
-    let ataquerival = console.log('El rival a elegido ' + Number(Math.round(Math.random() * 2)))
-    console.log ('La vida del jugador es ' + Number(playerhealth - ataquepuño))
-    console.log ('La vida del jugador es ' + Number(playerhealth - patadadefuego))
-    console.log ('La vida del jugador es ' + Number(playerhealth - superpoder))
-    switch(ataquerival) {
-    case '0': 
-        let ataque0 = Number(console.log('El rival ha elegido golpe de puño'));
-        console.log ('La vida del jugador es ' + Number(playerhealth - ataquepuño))
-        round2 (ataque0)    
-    case '1':
-        let ataque1 = Number(console.log('El rival ha elegido patada de fuego '));
-        console.log ('La vida del jugador es ' + Number(playerhealth - patadadefuego))
-        round2 (ataque1)   
-    case '2':  
-        let ataque2 = Number(console.log('El rival ha elegido superpoder '));
-        console.log ('La vida del jugador es ' + Number(playerhealth - superpoder))
-        round2 (ataque2)         
-    }
     
 }
 
@@ -41,7 +18,7 @@ function vidaenemigarestante0() {
 function eligeunahabilidad (){
     console.log('0: Golpe de puño (20 pts de daño)');
     console.log('1: Patada de fuego (30 pts de daño)');
-    console.log('2: Superpoder (40 pts de daño)');
+    console.log('2: Superpoder 40 pts de daño');
     let habilidad = prompt ('Elige tu ataque');
     switch(habilidad) {
         case '0':
@@ -66,9 +43,10 @@ function eligeunahabilidad (){
 }
 
 //HABILIDADES: Golpe de puño(20 de daño), Patada de fuego(30 de daño), Superpoder (40de daño), Curación (40 puntos de sanacion)
-function primerataque() {
-    let listahabilidades = alert ('LISTA DE HABILIDADES: 0: Golpe de puño (20 pts de daño), 1: Patada de fuego (30 pts de daño), 2: Superpoder (40 pts de daño)');
+function primerataque(valor) {
+    let listahabilidades = alert('LISTA DE HABILIDADES: 0: Golpe de puño (20 pts de daño), 1: Patada de fuego (30 pts de daño), 2: Superpoder (40 pts de daño)');
     eligeunahabilidad(listahabilidades);
+    
 }
 
 //HABILIDADES
