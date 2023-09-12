@@ -9,6 +9,7 @@ let superpoder = 40;
 
 
 //ATAQUE DEL RIVAL
+//ATAQUE DEL RIVAL
 function vidaenemigarestante0() {
     console.log('----Esperando ataque del rival----')
     console.log('0: Golpe de puño (20 pts de daño')
@@ -17,8 +18,8 @@ function vidaenemigarestante0() {
     alert('Esperando ataque enemigo')
     let ataquerival = console.log('El rival a elegido ' + Number(Math.round(Math.random() * 2)))
     console.log ('La vida del jugador es ' + Number(playerhealth - ataquepuño))
-    //console.log ('La vida del jugador es ' + Number(playerhealth - patadadefuego))
-    //console.log ('La vida del jugador es ' + Number(playerhealth - superpoder))
+    console.log ('La vida del jugador es ' + Number(playerhealth - patadadefuego))
+    console.log ('La vida del jugador es ' + Number(playerhealth - superpoder))
     switch(ataquerival) {
     case '0': 
         let ataque0 = Number(console.log('El rival ha elegido golpe de puño'));
@@ -46,17 +47,17 @@ function eligeunahabilidad (){
         case '0':
         let ataque0 = Number(console.log('Haz elegido golpe de puño'));
         //console.log (enemyhealth - ataquepuño)
-        console.log ('La vida del oponente es' + Number(enemyhealth - ataquepuño))
+        console.log ('La vida del oponente es ' + Number(enemyhealth - ataquepuño))
         vidaenemigarestante0(ataque0)
         case '1':
         let ataque1 = Number(console.log('Haz elegido patada de fuego'))
         //console.log (enemyhealth - ataquepuño)
-        console.log ('La vida del oponente es' + Number(enemyhealth - patadadefuego))
+        console.log ('La vida del oponente es ' + Number(enemyhealth - patadadefuego))
         vidaenemigarestante0(ataque1)
         case '2':
         let ataque2 = Number(console.log('Haz elegido superpoder'))
         //console.log (enemyhealth - ataquepuño)
-        console.log ('La vida del oponente es' + Number(enemyhealth - superpoder))
+        console.log ('La vida del oponente es ' + Number(enemyhealth - superpoder))
         vidaenemigarestante0(ataque2)
         default: 
         alert ('Habilidad no permitida');
