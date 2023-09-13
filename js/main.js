@@ -9,11 +9,33 @@ let superpoder = 40;
 
 
 //ATAQUE DEL RIVAL
-function vidaenemigarestante0() {
+/*function vidaenemigarestante0() {
+    alert('Esperando el ataque del rival')
+    console.log('----Esperando ataque del rival----')
+    console.log('0: Golpe de puño (20 pts de daño')
+    console.log('1: Patada de fuego (30 pts de daño')
+    console.log('2: Superpoder (40 pts de daño')
     alert('Esperando ataque enemigo')
-    
+    let ataquerival = console.log('El rival a elegido ' + Number(Math.round(Math.random() * 2)))
+    console.log ('La vida del jugador es ' + Number(playerhealth - ataquepuño))
+    console.log ('La vida del jugador es ' + Number(playerhealth - patadadefuego))
+    console.log ('La vida del jugador es ' + Number(playerhealth - superpoder))
+    switch(ataquerival) {
+    case '0': 
+        let ataque0 = Number(console.log('El rival ha elegido golpe de puño'));
+        console.log ('La vida del jugador es ' + Number(playerhealth - ataquepuño))
+        round2 (ataque0)    
+    case '1':
+        let ataque1 = Number(console.log('El rival ha elegido patada de fuego '));
+        console.log ('La vida del jugador es ' + Number(playerhealth - patadadefuego))
+        round2 (ataque1)   
+    case '2':  
+        let ataque2 = Number(console.log('El rival ha elegido superpoder '));
+        console.log ('La vida del jugador es ' + Number(playerhealth - superpoder))
+        round2 (ataque2)         
+    }
 }
-
+*/
 //ELEGIR ATAQUE
 function eligeunahabilidad (){
     console.log('0: Golpe de puño (20 pts de daño)');
