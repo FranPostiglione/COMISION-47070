@@ -1,129 +1,87 @@
-//VIDA TOTAL DE LOS JUGADORES
-let playerhealth = 100;
-let enemyhealth = 100; 
 
-//HABILIDADES
-let ataquepuño = 20;
-let patadadefuego = 30;
-let superpoder = 40;
+//INICIAR JUEGO
 
-
-//ATAQUE DEL RIVAL
-/*function vidaenemigarestante0() {
-    alert('Esperando el ataque del rival')
-    console.log('----Esperando ataque del rival----')
-    console.log('0: Golpe de puño (20 pts de daño')
-    console.log('1: Patada de fuego (30 pts de daño')
-    console.log('2: Superpoder (40 pts de daño')
-    alert('Esperando ataque enemigo')
-    let ataquerival = console.log('El rival a elegido ' + Number(Math.round(Math.random() * 2)))
-    console.log ('La vida del jugador es ' + Number(playerhealth - ataquepuño))
-    console.log ('La vida del jugador es ' + Number(playerhealth - patadadefuego))
-    console.log ('La vida del jugador es ' + Number(playerhealth - superpoder))
-    switch(ataquerival) {
-    case '0': 
-        let ataque0 = Number(console.log('El rival ha elegido golpe de puño'));
-        console.log ('La vida del jugador es ' + Number(playerhealth - ataquepuño))
-        round2 (ataque0)    
-    case '1':
-        let ataque1 = Number(console.log('El rival ha elegido patada de fuego '));
-        console.log ('La vida del jugador es ' + Number(playerhealth - patadadefuego))
-        round2 (ataque1)   
-    case '2':  
-        let ataque2 = Number(console.log('El rival ha elegido superpoder '));
-        console.log ('La vida del jugador es ' + Number(playerhealth - superpoder))
-        round2 (ataque2)         
-    }
-}
-*/
-//ELEGIR ATAQUE
-function eligeunahabilidad (){
-    console.log('0: Golpe de puño (20 pts de daño)');
-    console.log('1: Patada de fuego (30 pts de daño)');
-    console.log('2: Superpoder 40 pts de daño');
-    let habilidad = prompt ('Elige tu ataque');
-    switch(habilidad) {
-        case '0':
-        let ataque0 = Number(console.log('Haz elegido golpe de puño'));
-        //console.log (enemyhealth - ataquepuño)
-        console.log ('La vida del oponente es ' + Number(enemyhealth - ataquepuño))
-        vidaenemigarestante0(ataque0)
-        case '1':
-        let ataque1 = Number(console.log('Haz elegido patada de fuego'))
-        //console.log (enemyhealth - ataquepuño)
-        console.log ('La vida del oponente es ' + Number(enemyhealth - patadadefuego))
-        vidaenemigarestante0(ataque1)
-        case '2':
-        let ataque2 = Number(console.log('Haz elegido superpoder'))
-        //console.log (enemyhealth - ataquepuño)
-        console.log ('La vida del oponente es ' + Number(enemyhealth - superpoder))
-        vidaenemigarestante0(ataque2)
-        default: 
-        alert ('Habilidad no permitida');
-        eligeunahabilidad()
-    }
-}
-
-//HABILIDADES: Golpe de puño(20 de daño), Patada de fuego(30 de daño), Superpoder (40de daño), Curación (40 puntos de sanacion)
-function primerataque(valor) {
-    let listahabilidades = alert('LISTA DE HABILIDADES: 0: Golpe de puño (20 pts de daño), 1: Patada de fuego (30 pts de daño), 2: Superpoder (40 pts de daño)');
-    eligeunahabilidad(listahabilidades);
-    
-}
-
-//HABILIDADES
-function habilidades(valor){
-    if(valor) {
-    let habilidades= alert('Comencemos')
-    primerataque(habilidades);
-    } else {
-        alert('El jugador no está listo para luchar');
-}
-    console.log(valor)
-}
-
-//ESTAS LISTO?
-function estaslisto(){
-    let jugadorlisto = confirm('¿Estas listo para luchar?');
-    habilidades(jugadorlisto)
-    }
-    
+    let iniciar = alert('Bienvenido');
+       
 
 //INSTRUCCIONES
-function instrucciones(){
-        let instrucciones = alert ('Instrucciones: El jugador que logre vencer con las habilidades al rival (que este quede en 0 (cero) de vida), ganará el juego')
-        estaslisto()
-    }
 
-//VALIDAR CREDITO
-function validarcredito(valor){
-    if(valor) {
-    let validarficha = alert ('El jugador ha ingresado correctamente');
-    instrucciones(validarficha); 
-    } else {
-        alert('El jugador debe ingresar una ficha para poder jugar');
-    }
-    console.log(valor)   
-}
-
-//INGRESAR FICHA
-function ingresarficha(valor){
-    if(valor) {
-        let ingresarficha = confirm('Ingresa una ficha para poder jugar');
-        validarcredito(ingresarficha);
-    } else {
-        alert('El jugador no inició el juego');
-    }
-    console.log(valor)
+alert ('Instrucciones: El jugador que logre vencer con las habilidades al rival, ganará el juego')
     
+//ESTAS LISTO?
+alert('Preparados para luchar!');
+    
+
+//HABILIDADES
+alert('Comencemos')
+    
+  
+
+
+alert('LISTA DE HABILIDADES: 0: Tierra le gana a agua, 1: Fuego le gana a tierra, 2: Agua le gana a Fuego');
+    console.log('0: Golpe de tierra(le gana a agua), 1: Golpe de fuego(le gana a tierra), 2: Golpe de Agua(le gana a fuego)');
+    
+
+
+//ELEGIR ATAQUE
+let player = prompt ('Elige tu ataque');
+
+if (player == 0) {
+    alert ('Elegiste tierra')
+} else if (player == 1) {
+    alert('Elegiste Fuego')
+} else if (player == 2) {
+    alert ('Elegiste Agua')
+
 }
-iniciarjuego()
-//INICIAR JUEGO
-function iniciarjuego(valor){
-    let iniciar = confirm('Desea iniciar el juego?');
-    ingresarficha(iniciar);    
-    console.log(valor)
+
+alert ('Turno del enemigo')
+//ATAQUE ENEMIGO
+let enemy =Math.round(Math.random() * 2)
+    if (enemy == 0) {
+        alert ('El enemigo eligió tierra')
+    } else if (enemy == 1) {
+        alert('El enemigo eligió Fuego ')
+    } else if (enemy == 2) {
+        alert ('El enemigo eligió agua')
+    }
+
+//RESULTADO
+alert('Resultado')
+
+if (player == enemy) {
+    alert('Ha sido un empate')
+} else if(player == 0 && enemy == 2){
+    alert('Has ganado')
+} else if(player == 1 && enemy == 0) {
+    alert('Has ganado')
+} else if(player == 2 && enemy == 1) {
+    alert('Has ganado')
+} else {
+    alert('Has perdido el juego')
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
 
 
 
